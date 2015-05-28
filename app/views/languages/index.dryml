@@ -1,0 +1,8 @@
+<index-page>
+  <collection: fields="name">
+     <name-heading:> <model-name-human model="&Language" count="100"/> </name-heading:>
+     <name-view:><a href="#{request.env['PATH_INFO']}?locale=#{this_parent.uni}" ><name/></a></name-view:>
+  </collection:>
+</index-page>
+    
+       

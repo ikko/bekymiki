@@ -1,0 +1,11 @@
+<index-page>
+  <heading:><model-name-human count="100" model="&model"/></heading:>
+  <append-content:>
+    <a if="&current_user.administrator?" action="order">reorder</a>
+  </append-content:>
+  <collection: replace>
+    <collection/>
+  </collection:>
+</index-page>
+    
+       

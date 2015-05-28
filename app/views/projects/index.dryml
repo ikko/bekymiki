@@ -1,0 +1,16 @@
+<index-page>
+  <collection: fields="name, description, tools, skills, screenshot">
+     <name-heading:> <model-name-human model="&Project"/> </name-heading:>
+     <name-view:><a with="&this_parent"/></name-view:>
+     <screenshot-view:>
+       <div class="screenshot-table">
+         <a to="&this_parent"><img src="/#{this}"/></a>
+       </div>     
+     </screenshot-view:>
+  </collection:>
+  <append-content:>
+    <a if="&current_user.administrator?" action="order">reorder</a>
+  </append-content:>
+</index-page>
+    
+      

@@ -1,0 +1,8 @@
+<index-page>
+  <collection: replace>
+    <sortable-collection/>
+  </collection>
+  <append-content:>
+    <a if="&current_user.administrator?" to="&model">back</a>
+  </append-content:>
+</index-page>

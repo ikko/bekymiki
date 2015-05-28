@@ -1,0 +1,59 @@
+/*
+ * This is the global stylesheet manifest file.  Files or plugins
+ * referenced from here or placed in the application/ directory will be
+ * included in all subsites.  This file is included by front.css and all
+ * subsites.
+ *
+ *= require_self
+ *= require_tree ./application
+*/
+
+label { font-weight: bold; float:left; }
+
+input, textarea { width: 400px; }
+
+.screenshot-table {
+    width: 200px;
+    height: 140px;
+    overflow: scroll;
+}
+
+.screenshot-table-front {
+    width: 200px;
+    height: 140px;
+    overflow: scroll;
+    margin-right: 20px;
+    margin-bottom: 20px;    
+}
+
+.screenshot-card {
+    width: max;
+    height: 300px;
+    overflow: scroll;
+}
+
+.screenshot-card-image {
+    width: max;
+}
+
+.front-nav { color: white; }
+    
+.right      { float: right; text-align: right;}
+.left       { float: left; }
+
+.clean { clear: both; }
+
+.desc-placeholder { width: 80%; }
+.desc { width: 80%; }
+
+.front-col-one   { width: 250px; }
+.front-col-two   { width: 50%; }
+.front-col-three { width: 250px; }
+
+.job-col-one   { width: 30%; }
+.job-col-two   { width: 50%; }
+.job-col-three { width: 20%; }
+
+.skill-col-one   { width: 30%; }
+.skill-col       { width: 20%; }
+.skill-col-two   { width: 50%; }

@@ -1,0 +1,105 @@
+<page title="Béky Miklós">
+
+  <body: class="front-page"/>
+
+  <content:>
+    <header class="content-header hero-unit">
+      <h1>Béky Miklós</h1>
+      <br/>
+      <section >
+        <front-nav model="tool"/>
+          <repeat with="&@tools"><view/> | </repeat>
+        <front-nav model="skill"/>     
+          <repeat with="&@skills"><view/> | </repeat>
+        <front-nav model="project"/>
+          <repeat with="&@projects">
+            <div class="left"> 
+              <view/>
+              <div class="screenshot-table-front">            
+                <a to="&this">
+                  <img src="&this.screenshot"/>
+                </a>
+              </div>
+            </div>
+          </repeat>
+          <div class="clean"></div>
+        <front-nav model="job"/>
+          <repeat with="&@jobs">
+          
+            <table>
+              <tr>
+                <td class="front-col-one">
+                  <view:date-from format="&Job.date_format"/> - <view:date-to  format="&Job.date_format" if-blank="&Date.today.strftime(Job.date_format)"/>
+                </td>
+                <td class="front-col-two">
+                  <a href="/jobs##{this.id}"><view:role/></a>
+                </td>
+                <td class="front-col-three">
+                  <a if="&this.date_to.blank?" to="&Project"><view:company/></a><else><view:company/></else><br/>
+                </td>
+              </tr>
+            </table>
+          </repeat>
+        <front-nav model="education"/>
+          <repeat with="&@education">
+            <table>
+              <tr>
+                <td class="front-col-one">
+                  <view with="&this.from.to_s"/> - <view with="&this.to.to_s"/>
+                </td>
+                <td class="front-col-two">
+                  <view/>
+                </td>
+                <td class="front-col-three">
+                  <view:organization/><br/>
+                </td>
+              </tr>
+            </table>        
+          </repeat>
+        <front-nav model="language"/>
+          <repeat with="&@languages"><view/><br/></repeat>
+
+        <br/>
+        
+        <h3 if="&params[:cv]=='download'">
+          <t key="visit"></t>: <a href="http://bekymiki.hu">bekymiki.hu</a>
+        </h3>
+        <else>
+          <t key="download"></t>: <a href="&Job.cv" download="&Job.cv"><img src="pdf.png"/></a>
+        </else>
+       
+        <% if User.count == 0 -%>
+          <h3 style="margin-top: 20px;">There are no user accounts - please provide the details of the site administrator</h3>
+          <form with="&this || User.new" without-cancel>
+            <field-list: fields="name, email_address, password, password_confirmation"/>
+            <submit: label="Register Administrator"/>
+          </form>
+        <% end -%>
+
+      </section>
+    </header>
+
+    <section class="content-body">
+    </section>
+  </content:>
+  
+  <append-scripts:>
+    <script if="&params[:cv]=='download'">
+       $(function() {       
+         $('.hero-unit a').css('color', '#00658B');
+         $('body').css('background-color', 'white');
+         $('body').css('background-image', 'none');
+         $('.hero-unit').css('background-color', 'white');
+         $('.hero-unit').css('border', 'none');
+         $('.hero-unit').css('-webkit-box-shadow', 'none');
+         $('.hero-unit').css('box-shadow', 'none');
+         $('h4 a').css('color', '#333333');
+         $('h3 a').css('color', '#333333');
+         $('h3').css('color', '#333333');
+         $('.screenshot-table-front').css('overflow', 'hidden');
+       });
+    </script>
+  </append-scripts:>
+  
+  
+</page>

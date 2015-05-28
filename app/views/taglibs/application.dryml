@@ -1,0 +1,114 @@
+<!-- this file is included by front_site.dryml, admin_site.dryml et al, so
+you can place common code in this file. -->
+
+<def tag="account-nav">
+  <div class='nav-collapse collapse'>
+   <ul class='navigation account-nav nav pull-right' param>
+     <li class='nav-item' ><dev-user-changer/></li>
+     <li class='nav-item' ><a href="https://github.com/ikko/bekymiki" target="_blank"><t key="source_code">Source code</t></a></li>
+     <li class="nav-item #{@en}" ><a href="#{request.env['PATH_INFO']}?locale=en">EN</a></li>
+     <li class="nav-item #{@hu}" ><a href="#{request.env['PATH_INFO']}?locale=hu">HU</a></li>
+   </ul>
+  </div>
+</def>
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item class="tool-nav" with="&Tool"><ht key="tool.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item class="skill-nav" with="&Skill"><ht key="skill.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item class="project-nav" with="&Project"><ht key="project.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item class="job-nav" with="&Job"><ht key="job.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item class="language-nav" with="&Language"><ht key="language.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item class="education-nav" with="&Education"><ht key="education.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item class="personal-nav" with="&Personal"><ht key="personal.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+  </navigation>
+</def>
+
+<def tag="front-nav" attrs="model">
+  <h4><a class="front-nav" to="&model.capitalize.constantize"><ht key="#{model}.nav_item" count="100"><model-name-human count="100" model="&model.capitalize.constantize"/></ht></a></h4>
+</def>
+
+
+<def tag="card" for="Project">
+  <card class="project" param="default" merge>
+    <header: param>
+      <table>
+        <tr>
+          <td>
+            <div class="screenshot-card">
+              <a to="&this"><img src="/#{this.screenshot}" class="screenshot-card-image"/></a>
+            </div>
+          </td>
+          <td>
+            <div class="right desc-placeholder">
+              <div class="desc">
+                <h3 param="heading"><a><name/></a></h3>
+                <strong><view:description/></strong>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </header:>
+  </card>
+</def>
+
+<def tag='links-for-collection'      ><span merge-attrs><%= this.empty? ? "" : context_map { view }.safe_join(", ") %></span></def>
+
+
+<def tag="card" for="Job">
+  <card class="job" param="default" merge>
+    <header: param>
+      <a name="&this.id"></a>
+      <table>
+        <tr>
+          <td class="job-col-one">
+            <h4><view:role/></h4>
+            <a href="&this.company_url" target="_blank"><view:company/></a><br/>
+            <view:date-from format="&Job.date_format"/> - <view:date-to  format="&Job.date_format" if-blank="&Date.today.strftime(Job.date_format)"/>
+          </td>
+          <td class="job-col-two">
+            <view:description/>
+          </td>
+          <td class="job-col-three">
+            <repeat:tools> <a class="right"><name/></a><br/></repeat>
+            <repeat:skills><a class="right"><name/></a><br/></repeat>
+          </td>
+        </tr>
+      </table>
+      <a if="&current_user.administrator?" action="edit" class="right">edit</a>
+    </header:>
+  </card>
+</def>
+
+
+<def tag="card" for="Skill">
+  <card class="skill" param="default" merge>
+    <header: param>
+      <table>
+        <tr>
+          <td class="skill-col-one">
+            <h4><a><view:name/></a></h4>
+          </td>
+          <td class="skill-col-two">
+            <strong><view:description/></strong>
+          </td>
+          <td class="skill-col"></td>
+        </tr>
+      </table>
+      <a if="&current_user.administrator?" action="edit" class="right">edit</a>
+    </header:>
+  </card>
+</def>
+
+
+<def tag="card" for="Education">
+  <card class="education" param="default" merge>
+    <header: param>
+      <h4><view:title/></h4><br/>
+      <strong><view:organization/></strong><br/>
+      <%= this.from %> - <%= this.to %>
+      <a if="&current_user.administrator?" action="edit" class="right">edit</a>
+    </header:>
+  </card>
+</def>

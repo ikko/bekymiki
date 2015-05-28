@@ -1,0 +1,27 @@
+<show-page>
+
+  <custom-scripts:>
+    <script>
+      $(function() { $('.project-nav').addClass('active'); });
+    </script>
+  </custom-scripts:>
+    
+  <heading:>
+    <name/>
+    <h4 class="desc"><view:description/></h4>
+  </heading:>
+  
+  <content-body: replace>
+
+    <feckless-fieldset fields="tools,url,skills,screenshot" class="horizontal">
+      <url-view:>
+        <a href="&this" target="_blank"><view/></a>
+      </url-view:>
+      <screenshot-view:>
+        <a href="&this_parent.url" target="_blank"><img src="/#{this}" width="max"/></a>
+      </screenshot-view:>
+    
+    </feckless-fieldset>
+  </content-body:>
+</show-page>
+ 

@@ -1,0 +1,39 @@
+<show-page>
+
+  <custom-scripts:>
+    <script>
+      $(function() { $('.tool-nav').addClass('active'); });
+    </script>
+  </custom-scripts:>
+  
+  <heading:>
+    <name/>
+  </heading:>
+  
+  <content-body: replace>
+    <feckless-fieldset fields="jobs, projects,url" class="horizontal">
+      
+      <url-view:>
+        <a href="&this" target="_blank"><view/></a>
+      </url-view:>
+    
+      <projects-label:>
+        <t key="projects" if="&!this.empty?"/>
+      </projects-label:>
+
+      <jobs-label:>
+        <t key="jobs" if="&!this.empty?"/>
+      </jobs-label:>
+      
+      <projects-view:>
+        <collection if="&!this.empty?"/>
+      </projects-view:>
+      
+      <jobs-view:>
+        <collection if="&!this.empty?"/>
+      </jobs-view:>
+    
+    </feckless-fieldset>
+  </content-body:>
+</show-page>
+ 

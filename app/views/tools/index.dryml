@@ -1,0 +1,12 @@
+<index-page>
+  <append-content:>
+    <a if="&current_user.administrator?" action="order">reorder</a>
+  </append-content:>
+  <collection: fields="name, url, projects, jobs">
+     <name-heading:> <model-name-human model="&Tool"/> </name-heading:>
+     <name-view:><a with="&this_parent"/></name-view:>
+     <jobs-heading:> <a to="&Job"><model-name-human model="&Job"/></a> </jobs-heading:>
+  </collection:>
+</index-page>
+    
+       

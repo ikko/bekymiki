@@ -1,0 +1,70 @@
+# Even if you only support one language, you can use this file to customise the names that appear in the UI
+# e.g.
+
+hu:
+  hello: "Hello világ"
+  contact: "Kapcsolat"
+  source_code: "Forráskód"
+  visit: "Tekintse meg ezt a CV-t online"
+  download: "Töltse le ezt a CV-t"
+
+  projects: Projektek
+  jobs: Állások
+  
+  attributes:
+    created_at: Létrehozva
+    updated_at: Módosítva
+
+  activerecord:
+    models:
+      user:
+        one: Felhasználó
+        other: Felhasználók
+      project:
+        one: Projekt
+        other: Projektek
+      tool:
+        one: Eszköz
+        other: Eszközök
+      job:
+        one: Állás
+        other: Állások
+      language:
+        one: Nyelv
+        other: Nyelvek
+      personal:
+        one: Személyes
+        other: Személyes
+      skill:
+        one: Jártasság
+        other: Jártasság
+      education:
+        one: Képesítés
+        other: Képesítés
+    attributes:
+      project:
+        name: Név
+        description: Leírás
+        tools: Eszközök
+        skills: Jártasság
+        screenshot: Pillanatkép
+      tool:
+        name: Név
+        projects: Projektek
+      user:
+        name: Name
+        password: Password
+        current_password: Current Password
+        password_confirmation: Password Confirmation
+        email_address: Email Address
+    attribute_help:
+      user:
+        email_address: We will never share your address with third parties
+  
+  
+  date:
+    formats:
+      default: "%Y.%m.%d."
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"

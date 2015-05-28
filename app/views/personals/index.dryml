@@ -1,0 +1,27 @@
+<index-page>
+  <heading:><model-name-human model="&model"/></heading:>
+  <collection: replace>
+    
+    <table>
+      <tr>
+        <td>
+          <img src="http://m.blog.hu/mi/mirr-murr/image/szlovenia4.jpg"/>
+        </td>
+        <td style="width:50%">
+          <div  class="right">
+            <repeat>
+              <img src="&this.favicon" width="16px" height="16px"/> <a target="_blank" href="&this.url"><view:url/></a><br/>
+            </repeat>
+          </div>
+        </td>
+      </tr>
+    </table>
+    
+  </collection:>
+  
+  <append-content:>
+    <a if="&current_user.administrator?" action="new">new</a>
+    <a if="&current_user.administrator?" action="order">reorder</a>
+  </append-content:>
+  
+</index-page> 

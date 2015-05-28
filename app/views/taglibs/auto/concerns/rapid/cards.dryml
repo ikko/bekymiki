@@ -1,0 +1,108 @@
+<!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
+
+
+<def tag="card" for="Education">
+  <card class="education" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Job">
+  <card class="job" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+    <body: param>
+      <view:description param="description"/>
+    </body:>
+  </card>
+</def>
+
+<def tag="card" for="JobSkill">
+  <card class="job-skill" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="JobTool">
+  <card class="job-tool" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Language">
+  <card class="language" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Personal">
+  <card class="personal" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Project">
+  <card class="project" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+    <body: param>
+      <view:description param="description"/>
+    </body:>
+  </card>
+</def>
+
+<def tag="card" for="ProjectSkill">
+  <card class="project-skill" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="ProjectTool">
+  <card class="project-tool" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Skill">
+  <card class="skill" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+    <body: param>
+      <view:description param="description"/>
+    </body:>
+  </card>
+</def>
+
+<def tag="card" for="Tool">
+  <card class="tool" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="User">
+  <card class="user" param="default" merge>
+    <header: param>
+      <h4 param="heading"><name/></h4>
+    </header:>
+  </card>
+</def>
+

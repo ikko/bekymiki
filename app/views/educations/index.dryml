@@ -1,0 +1,6 @@
+<index-page>
+  <heading:><model-name-human model="&model"/></heading:>
+  <collection: replace>
+    <collection/>
+  </collection:>
+</index-page> 

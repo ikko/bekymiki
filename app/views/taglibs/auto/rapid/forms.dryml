@@ -1,0 +1,120 @@
+<!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
+
+
+<def tag="form" for="Education">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="organization, title_hu, title_en, from, to" param/>
+    <div param="actions">
+      <submit label="#{ht 'education.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Job">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="company, company_url, role_hu, role_en, date_from, date_to, description_hu, description_en, position, skills, tools" param/>
+    <div param="actions">
+      <submit label="#{ht 'job.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Language">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name_hu, name_en, uni" param/>
+    <div param="actions">
+      <submit label="#{ht 'language.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Personal">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="url, favicon, position" param/>
+    <div param="actions">
+      <submit label="#{ht 'personal.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Project">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, description_hu, description_en, url, screenshot, position, skills, tools" param/>
+    <div param="actions">
+      <submit label="#{ht 'project.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Skill">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name_hu, name_en, description_hu, description_en, position, jobs, projects" param/>
+    <div param="actions">
+      <submit label="#{ht 'skill.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Tool">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, url, position, jobs, projects" param/>
+    <div param="actions">
+      <submit label="#{ht 'tool.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="User">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, email_address, administrator, state" param/>
+    <div param="actions">
+      <submit label="#{ht 'user.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+<def tag="signup-form" polymorphic/>
+<def tag="signup-form" for="User">
+  <form lifecycle="signup" merge param="default">
+    <error-messages param/>
+    <field-list fields="name, email_address, password, password_confirmation" param/>
+    <div param="actions">
+      <submit label="#{ht 'user.actions.signup', :default=>['Signup']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+<def tag="reset-password-form" polymorphic/>
+<def tag="reset-password-form" for="User">
+  <form lifecycle="reset_password" merge param="default">
+    <error-messages param/>
+    <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+    <field-list fields="password, password_confirmation" param/>
+    <div param="actions">
+      <submit label="#{t 'activerecord.attributes.user.lifecycle.transitions.reset_password', :default=>['Reset Password']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
