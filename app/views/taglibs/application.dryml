@@ -1,5 +1,8 @@
 <!-- this file is included by front_site.dryml, admin_site.dryml et al, so
 you can place common code in this file. -->
+<def tag="app-name">
+   <strong>BÉKYMIKI</strong>
+</def>
 
 <def tag="account-nav">
   <div class='nav-collapse collapse'>

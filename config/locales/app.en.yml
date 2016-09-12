@@ -5,9 +5,9 @@ en:
   hello: "Hello world"
   contact: "Contact"
   source_code: "Source code"
-  visit: "Visit this CV online"
-  download: "Download this CV"
-  jobs: Jobs
+  visit: "Visit this online"
+  download: "Download this"
+  jobs: Experiences
   projects: Projects
   
 #  attributes:
@@ -25,6 +25,10 @@ en:
       education:
         one: Education
         other: Education
+      job:
+        one: Experience
+        other: Experiences
+      
 
 #    attributes:
 #      user:

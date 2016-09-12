@@ -57,3 +57,9 @@ input, textarea { width: 400px; }
 .skill-col-one   { width: 30%; }
 .skill-col       { width: 20%; }
 .skill-col-two   { width: 50%; }
+
+body.front-page {
+    background-image: url(http://bekymiki.hu/background.gif);
+    background-position: bottom;
+    background-color: black
+}

@@ -4,8 +4,6 @@
 
   <content:>
     <header class="content-header hero-unit">
-      <h1>Béky Miklós</h1>
-      <br/>
       <section >
         <front-nav model="tool"/>
           <repeat with="&@tools"><view/> | </repeat>

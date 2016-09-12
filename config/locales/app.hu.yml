@@ -5,8 +5,8 @@ hu:
   hello: "Hello világ"
   contact: "Kapcsolat"
   source_code: "Forráskód"
-  visit: "Tekintse meg ezt a CV-t online"
-  download: "Töltse le ezt a CV-t"
+  visit: "Tekintse meg online"
+  download: "Töltse le"
 
   projects: Projektek
   jobs: Állások
@@ -27,8 +27,8 @@ hu:
         one: Eszköz
         other: Eszközök
       job:
-        one: Állás
-        other: Állások
+        one: Tapasztalat
+        other: Tapasztalatok
       language:
         one: Nyelv
         other: Nyelvek

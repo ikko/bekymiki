@@ -153,7 +153,7 @@
 
     <content-body: param>
       <a action="new" to="&model" param="new-link">
-        <ht key="job.actions.new">New Job</ht>
+        <ht key="job.actions.new">New Experience</ht>
       </a>
 
       <sortable-collection param="collection"/>
@@ -165,20 +165,20 @@
 
 
 <def tag="new-page" for="Job">
-  <page merge title="#{ht 'job.new.title', :default=>[' New Job'] }">
+  <page merge title="#{ht 'job.new.title', :default=>[' New Experience'] }">
     <body: class="new-page job" param/>
 
     <content-header: param>
       <h2 param="heading">
         <ht key="job.new.heading">
-          New Job
+          New Experience
         </ht>
       </h2>
     </content-header:>
 
     <content-body: param>
       <form param>
-        <submit: label="#{ht 'job.actions.create', :default=>['Create Job']}"/>
+        <submit: label="#{ht 'job.actions.create', :default=>['Create Experience']}"/>
       </form>
     </content-body:>
   </page>
@@ -186,14 +186,14 @@
 
 
 <def tag="show-page" for="Job">
-  <page merge title="#{ht 'job.show.title', :default=>['Job'], :name => name(:no_wrapper => true) }" without-aside >
+  <page merge title="#{ht 'job.show.title', :default=>['Experience'], :name => name(:no_wrapper => true) }" without-aside >
 
     <body: class="show-page job" param/>
 
     <content-header: param>
       <h2 param="heading">
         <ht key="job.show.heading" name="#{name(:no_wrapper => true)}">
-          Job <name/>
+          Experience <name/>
         </ht>
       </h2>
 
@@ -201,7 +201,7 @@
 
       <a action="edit" if="&can_edit?" param="edit-link">
         <ht key="job.actions.edit" name="#{name(:no_wrapper => true)}">
-          Edit Job
+          Edit Experience
         </ht>
       </a>
     </content-header:>
@@ -216,17 +216,17 @@
 
 
 <def tag="edit-page" for="Job">
-  <page merge title="#{ht 'job.edit.title', :default=>['Edit Job'], :name => name(:no_wrapper => true) }">
+  <page merge title="#{ht 'job.edit.title', :default=>['Edit Experience'], :name => name(:no_wrapper => true) }">
 
     <body: class="edit-page job" param/>
 
     <content-header: param>
       <h2 param="heading">
         <ht key="job.edit.heading" name="#{name(:no_wrapper => true)}">
-          Edit Job
+          Edit Experience
         </ht>
       </h2>
-      <delete-button label="#{ht 'job.actions.delete', :default=>['Remove This Job']}" param/>
+      <delete-button label="#{ht 'job.actions.delete', :default=>['Remove This Experience']}" param/>
     </content-header:>
 
     <content-body: param>
